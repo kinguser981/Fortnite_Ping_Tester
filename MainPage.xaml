@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             BackgroundColor="#1F1F1F"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+            
+             >
+    <ContentPage.Behaviors>
+
+        <toolkit:StatusBarBehavior
+            
+            StatusBarColor="#1F1F1F"
+            StatusBarStyle="LightContent"
+            />
+    </ContentPage.Behaviors>
+
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            
+            >
+            <Image
+                Source="fortnite.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+
+            <Label
+                Text="Welcome to Fortnite DNS Tester App!"
+                Style="{StaticResource SubHeadline}"
+                FontFamily="Fortnite"
+                TextColor="BlueViolet"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+
+            <StackLayout Margin="20" Spacing="20">
+
+          
+
+                <Picker
+                 x:Name="RegionPicker"
+                 AutomationProperties.HelpText="Select your region from the list"
+                 BackgroundColor="Transparent"
+                 FlowDirection="LeftToRight"
+                 StyleClass="PickerStyle"
+                 Title="Choose your region" 
+                 FontAttributes="Bold"
+                 FontFamily="Fortnitee"
+                 TextColor="Green"
+                 FontSize="25"
+                 SelectedItem="pickerselected"
+                    
+                    />
+
+
+                
+             
+               
+                
+                
+                
+                
+       
+            
+            <Button
+                x:Name="CounterBtn"
+                Text="Start the Test" 
+                TextColor="WhiteSmoke"
+                FontSize="30"
+                FontFamily="Fortnite"
+                BackgroundColor="DarkRed"
+                BorderColor="Aqua"
+                Margin="0"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="CenterAndExpand" />
+
+                <Label 
+                 x:Name="SelectedItemLabel"
+                 Text="Status:"
+                 VerticalOptions="Fill"
+                 HorizontalOptions="Fill"
+                 WidthRequest="370"
+                 TextColor="OrangeRed"
+                 FontAttributes="Bold"
+                 FontFamily="Fortnite"
+                 FontSize="20" />
+
+            </StackLayout>
+
+            <ListView
+                x:Name="MyListView"
+                HeightRequest="300"
+                WidthRequest="400"
+                VerticalOptions="Fill"
+                
+                HorizontalOptions="Fill"
+                ItemSelected="MyListView_ItemSelected"
+                
+                >
+                <ListView.ItemTemplate>
+                    
+                    <DataTemplate>
+
+                        <TextCell
+                             Text="{Binding}"
+                            
+                            TextColor="Olive"
+                            
+                            ></TextCell>
+                        
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+  
+            </ListView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
